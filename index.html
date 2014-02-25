@@ -1,0 +1,154 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>WebGL Game</title>
+	
+	<link rel="stylesheet" href="css/style.css">
+	
+</head>
+<body>
+	<div id="veil">
+	<div id="title">Disorder</div>
+		<div id="controls">
+			<ul>
+				<li><span>Keaboard</span></li>
+				<li>Move : E,S,D,F</li>
+				<li>Rotate : mouse</li>
+				<li>Run : shift</li>
+				<li>Crouch : Q,R</li>
+				<li>Jump : space</li>
+				<li>Action : G</li>
+				<li>Lighter : click</li>
+			</ul>
+			<ul>
+				<li><span>Gamepad</span></li>
+				<li>Move : cross</li>
+				<li>Rotate : right joystick</li>
+				<li>Run : l<span class="popo">1</span></li>
+				<li>Crouch : l<span class="popo">2</span></li>
+				<li>Jump : A</li>
+				<li>Action : X</li>
+				<li>Lighter : R<span class="popo">1</span></li>
+			</ul>
+		</div>
+		<div id="whattodo">
+			Find the 7 Books... Gasoline can be helpful
+		</div>
+		<div id="wait">
+			This could take a few min to load, please wait...
+		</div>
+		<div id="instructions">
+			<span>Play</span>
+		</div>
+		<div id="credits">
+			<span>Credits</span>
+		</div>
+		<div id="credName">
+			<ul>
+			 	<li>Anne-Beatrice Ciblat : Conception</li>
+			 	<li>Aurelien Resseguier : Conception/House Model</li>
+			 	<li>Gaspard Guillaume : Javascript Samurai</li>
+			 </ul> 
+		</div>
+		<audio id="ost">
+		  <source src="assets/sounds/music/afleetingspeck.ogg" type="audio/ogg">
+		</audio>
+	</div>
+	<div id="zippo">
+		<div id="gas"></div>
+	</div>
+	<div id="life">
+		<div class="full"><div id="mental"></div></div>
+		<div class="full"><div id="phys"></div></div>
+	</div>
+	<div id="found"><span></span> let to find ! </div>
+	<div id="blur">
+		
+	</div>
+	<div id="win">
+		<ul class="endText">
+			<li>You win !</li>
+			<li>press Y or Enter to get Back to the menu</li>
+		</ul>
+	</div>
+	<div id="loose">
+		<ul class="endText">
+			<li>You loose !</li>
+			<li>press Y or Enter to get Back to the menu</li>
+		</ul>
+	</div>
+	<div id="myAudio">
+		<audio id="theme"><source src="assets/sounds/music/theme.ogg" type="audio/ogg"></audio>
+			<!-- Character sounds  -->
+		<audio id="step"><source src="assets/sounds/character/step.ogg" type="audio/ogg"></audio>
+		<audio id="breath"><source src="assets/sounds/character/breath.ogg" type="audio/ogg"></audio>
+		<audio id="lighter"><source src="assets/sounds/character/zippo.ogg" type="audio/ogg"></audio>
+		<audio id="teeth"><source src="assets/sounds/character/teeth.ogg" type="audio/ogg"></audio>
+		<audio id="laugh"><source src="assets/sounds/character/laugh.ogg" type="audio/ogg"></audio>
+		<audio id="oh"><source src="assets/sounds/character/oh.ogg" type="audio/ogg"></audio>
+		<audio id="hurt"><source src="assets/sounds/character/hurt.ogg" type="audio/ogg"></audio>
+
+		<!-- Atmosphere sounds-->
+		<audio id="atmo10"><source src="assets/sounds/atmosphere/atmo10.ogg" type="audio/ogg"></audio>
+		<audio id="atmo11"><source src="assets/sounds/atmosphere/atmo11.ogg" type="audio/ogg"></audio>
+		<audio id="atmo12"><source src="assets/sounds/atmosphere/atmo12.ogg" type="audio/ogg"></audio>
+		<audio id="atmo13"><source src="assets/sounds/atmosphere/atmo13.ogg" type="audio/ogg"></audio>
+		<audio id="atmo14"><source src="assets/sounds/atmosphere/atmo14.ogg" type="audio/ogg"></audio>
+		<audio id="atmo15"><source src="assets/sounds/atmosphere/atmo15.ogg" type="audio/ogg"></audio>
+		<audio id="atmo16"><source src="assets/sounds/atmosphere/atmo16.ogg" type="audio/ogg"></audio>
+		<audio id="atmo17"><source src="assets/sounds/atmosphere/atmo17.ogg" type="audio/ogg"></audio>
+		<audio id="atmo18"><source src="assets/sounds/atmosphere/atmo18.ogg" type="audio/ogg"></audio>
+		<audio id="atmo19"><source src="assets/sounds/atmosphere/atmo19.ogg" type="audio/ogg"></audio>
+		<audio id="atmo20"><source src="assets/sounds/atmosphere/atmo20.ogg" type="audio/ogg"></audio>
+		<audio id="atmo21"><source src="assets/sounds/atmosphere/atmo21.ogg" type="audio/ogg"></audio>
+		<audio id="atmo22"><source src="assets/sounds/atmosphere/atmo22.ogg" type="audio/ogg"></audio>
+		<audio id="atmo23"><source src="assets/sounds/atmosphere/atmo23.ogg" type="audio/ogg"></audio>
+		<audio id="atmo24"><source src="assets/sounds/atmosphere/atmo24.ogg" type="audio/ogg"></audio>
+		<audio id="atmo25"><source src="assets/sounds/atmosphere/atmo25.ogg" type="audio/ogg"></audio>
+		<audio id="atmo26"><source src="assets/sounds/atmosphere/atmo26.ogg" type="audio/ogg"></audio>
+		<audio id="atmo27"><source src="assets/sounds/atmosphere/atmo27.ogg" type="audio/ogg"></audio>
+		<audio id="atmo28"><source src="assets/sounds/atmosphere/atmo28.ogg" type="audio/ogg"></audio>
+		<audio id="atmo29"><source src="assets/sounds/atmosphere/atmo29.ogg" type="audio/ogg"></audio>
+
+		<!-- Woman sound -->
+		<audio id="wom0"><source src="assets/sounds/woman/wom0.ogg" type="audio/ogg"></audio>
+		<audio id="wom1"><source src="assets/sounds/woman/wom1.ogg" type="audio/ogg"></audio>
+		<audio id="wom2"><source src="assets/sounds/woman/wom2.ogg" type="audio/ogg"></audio>
+		<audio id="wom3"><source src="assets/sounds/woman/wom3.ogg" type="audio/ogg"></audio>
+		<audio id="wom4"><source src="assets/sounds/woman/wom4.ogg" type="audio/ogg"></audio>
+		<audio id="wom5"><source src="assets/sounds/woman/wom5.ogg" type="audio/ogg"></audio>
+
+		<audio id="monster"><source src="assets/sounds/monster/monster.ogg" type="audio/ogg"></audio>
+	</div>
+	<script type="text/javascript" src="lib/jquery-2.0.3.min.js"></script>
+	<script type="text/javascript" src="lib/three.min.js"></script>
+
+
+	<script type="text/javascript" src="lib/THREEx.KeyboardState.js"></script>
+	<script type="text/javascript" src="lib/Stats.js"></script>
+
+
+	<script  src="lib/MTLLoader.js"></script>
+	<script  src="lib/OBJMTLLoader.js"></script>
+
+	<script type="text/javascript" src="lib/PointerLockControls.js"></script>
+
+	<script type="text/javascript" src="js/app.js"></script>
+	<script type="text/javascript" src="js/controls.js"></script>
+	<script type="text/javascript" src="js/settings.js"></script>
+	<script type="text/javascript" src="js/scene.js"></script>
+	<script type="text/javascript" src="js/gameobjects.js"></script>
+	<script type="text/javascript" src="js/player.js"></script>
+	<script type="text/javascript" src="js/monster.js"></script>
+	<script type="text/javascript" src="js/stage.js"></script>
+	<script type="text/javascript" src="js/light.js"></script>
+	<script type="text/javascript" src="js/engine.js"></script>
+	
+	<script>
+		$(function(){
+			app.init();
+		})
+	</script>
+</body>
+</html>

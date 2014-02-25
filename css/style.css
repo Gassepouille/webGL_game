@@ -1,0 +1,253 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* ------------------------ Begin css*/
+
+body{
+	overflow:hidden;
+	background-color: #fff;
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+#veil{
+	position:absolute;
+	top:0;
+	left:0;
+	height:100%;
+	width:100%;
+	background-image:url('../assets/img/fond.png');
+	-webkit-background-size: cover;
+  	-moz-background-size: cover;
+  	-o-background-size: cover;
+  	background-size: cover;
+	z-index:10;
+}
+#title{
+	font-family: arial;
+	font-size:120px;
+	color:#fff;
+	width:100%;
+}
+#credits{
+	margin-left:5%;
+	font-family: arial;
+	color:#fff;
+	font-size:60px;
+	width:95%;
+	margin-top:50px;
+}
+#wait{
+	margin-left:5%;
+	width:95%;
+	font-family: arial;
+	color:#fff;
+	font-size:30px;
+	margin-top:300px;
+}
+#whattodo{
+	margin-left:5%;
+	font-family: arial;
+	color:#fff;
+	font-size:20px;
+}
+#instructions{
+	margin-left:5%;
+	width:95%;
+	font-family: arial;
+	color:#fff;
+	font-size:60px;
+	margin-top:300px;
+	display:none;
+}
+
+#instructions span:hover,#credits span:hover{
+	cursor:pointer;
+}
+#controls{
+	width:100%;
+	font-size:30px;
+	margin:auto;
+	margin-top: 50px;
+	font-family: arial;
+	color:#fff;
+}
+#controls ul{
+	float:right;
+	margin-right:40px;
+}
+#controls li{
+	text-align: center;
+}
+#controls li span{
+	font-weight: bold;
+}
+#controls ul li:first-child{
+	margin-bottom: 10px;
+}
+#controls li .popo{
+	font-family: arial;
+}
+#credName{
+	position:absolute;
+	bottom:-100px;
+	right:50px;
+	font-family: arial;
+	font-size:30px;
+	color:#fff;
+}
+
+
+
+/*------------------------------------------------ CSS GAME ------------------------*/
+
+#life{
+	position:absolute;
+	height:100px;
+	width:200px;
+	bottom:30px;
+	left:20px;
+}
+.full{
+	float:left;
+	width:100px;
+	height:100px;
+}
+#mental{
+	float:left;
+	height:100px;
+	width:100px;
+	background-image:url('../assets/img/brain.png');
+	background-position: 0 0;
+}
+#phys{
+	float:left;
+	height:100px;
+	width:100px;
+	background-image:url('../assets/img/heart.png');
+	background-position: 0 0;
+}
+#zippo{
+	position:absolute;
+	height:100px;
+	width:70px;
+	padding:10px;
+	left:30px;
+	bottom:140px;
+	background-image:url('../assets/img/zippo.png');
+	-webkit-background-size: cover;
+  	-moz-background-size: cover;
+  	-o-background-size: cover;
+  	background-size: cover;
+}
+#gas{
+	position:absolute;
+	bottom:10px;
+	right:15px;
+	height:50px;
+	width:60px;
+	background:#ff0;
+	border-radius:2px;
+}
+#found{
+	font-family: arial;
+	font-size:30px;
+	color:#fff;
+	position: absolute;
+	right:100px;
+	top:300px;
+	opacity:0;
+}
+#found span{
+	font-family: arial;
+	font-size:30px;
+	color:#fff;
+}
+#win{
+	font-family: arial;
+	font-size:50px;
+	color:#fff;
+	width:100%;
+	height:100%;
+	text-align: center;
+	position:absolute;
+	top:-2000;
+	opacity:0;
+	background-color: #000;
+}
+#loose{
+	font-family: arial;
+	font-size:50px;
+	color:#fff;
+	width:100%;
+	height:100%;
+	text-align: center;
+	position:absolute;
+	top:-2000;
+	opacity:0;
+	background-color: #000;
+}
+#loose li, #win li{
+	margin-top:100px;
+}
+#endText{
+	text-align: center;
+	margin: auto;
+}
+#blur{
+	background-image:url('../assets/img/hit.png');
+	position:absolute;
+	top:0px;
+	left:0px;
+	opacity:0;
+	background-size:cover;
+}
